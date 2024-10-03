@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undangan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+
+    /* cover */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-size: 100%;
+      padding: 0;
+      margin: 0;
+      visibility: hidden;
+      font-family: 'Philosopher', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .teg-full-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Gambar background */
+    img.bg-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .bg-2 {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      background-image: linear-gradient(rgba(245, 245, 245, 0), rgba(153, 120, 11, 0.623)), url('https://app.smstory.id/assets/uploads/imgproject/f863ebcc5204c65065beb7ea3f37885f.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .content-1st {
+      bottom: 10vh;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    #home {
+      position: relative;
+    }
+
+    b#teg-kepada {
+      color: #000;
+      padding: 2.5vh 5vw;
+      background-color: #ffff;
+      border-radius: 20px;
+    }
+
+    /* Overlay */
+    #teg-cover {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.801);
+      z-index: 1200;
+      visibility: visible;
+    }
+
+    /* Box yang muncul di atas overlay */
+    #teg-box-cover {
+      background-color: rgba(0, 0, 0, 0.596);
+      color: black;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      text-align: center;
+      z-index: 1300;
+      visibility: visible;
+    }
+
+    a#teg-tombol-buka {
+      cursor: pointer;
+      border: none;
+      padding: 1vh 3vw;
+      border-radius: 20px;
+      background-color: #fcd29f;
+      transition: transform 0.5s, background-color 0.6s, box-shadow 0.5s;
+      text-decoration: none;
+      color: #000;
+    }
+
+    a#teg-tombol-buka:hover {
+      background-color: #fcb470;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    a#teg-tombol-buka:active {
+      transform: scale(0.95);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      background-color: #ffab60;
+    }
+
+    h3.wedd {
+      font-size: 20px;
+      color: #fcd29f;
+    }
+
+    h1.mempelai-1 {
+      font-family: "Sansita Swashed", system-ui;
+      color: #fcd29f;
+    }
+
+    h1.mempelai-2 {
+      color: #ffffff;
+    }
+
+    p.kepada {
+      color: #fcd29f;
+    }
+
+    p.ortu {
+      font-size: 12px;
+    }
+
+    /* basic */
+    .section-container {
+      min-height: 100vh;
+      margin: 1vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 9vh;
+    }
+
+    .section-navigation {
+      position: fixed;
+      bottom: -4.5px;
+      z-index: 100;
+      text-align: center;
+      width: 100%;
+    }
+
+    .navigation-button-group {
+      display: flex;
+      height: 56px;
+      width: 100%;
+      background-color: #000;
+      color: #fcd29f;
+    }
+
+    .button-nav {
+      text-decoration: none;
+      height: 50px;
+      margin: 3px;
+      width: 100%;
+      background-color: transparent;
+      color: #fcd29f;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pic-1 {
+      object-fit: cover;
+      height: 15rem;
+      width: 10rem;
+      border-radius: 50px 20px 50px 20px;
+      border: #fcd29f solid 3px;
+      box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.288);
+    }
+
+    img.photo-girl1, 
+    img.photo-men1 {
+      object-fit: cover;
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50px 20px 50px 20px;
+      border: #fcd29f solid 3px;
+      box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.288);
+    }
+
+    p.text-home {
+      font-size: 17px;
+      color: #572c19;
+      font-weight: 900;
+    }
+
+    @media only screen and (min-width: 426px) {
+      .container-central {
+        width: 425px;
+        margin: auto;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .navigation-button-group {
+        width: 576px;
+        margin: auto;
+        margin-bottom: 5px;
+        border-radius: 5px;
+      }
+    }
+
+    bg-2 {
+      height: 50vh;
+    }
+
+    .hide {
+      overflow: hidden;
+      width: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .button-nav,
+    .hide {
+      transition: width 0.7s linear, margin 0.7s linear, padding 0.7s linear;
+    }
+
+    .invert-effect {
+      color: #a0522d;
+      border-left: 1px solid #a0522d;
+      border-right: 1px solid #a0522d;
+    }
+
+    /* Tambahan untuk animasi gulir ke bawah */
+    .roll-down {
+      animation: rollDown 0.5s forwards;
+      /* Atur durasi animasi sesuai kebutuhan */
+    }
+
+    @keyframes rollDown {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(100px);
+        /* Atur seberapa jauh Anda ingin elemen bergulir */
+        opacity: 0;
+        /* Menghilang saat bergulir */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-central">
+    <section id="home" class="as-page">
+      <div class="bg-2"></div>
+      <div class="content-1st" style="text-align: center;margin-top: 30vh;">
+        <h3 class="" style="font-size: 17px;color:#fff"">
+          Save The Date</h3>
+        <h1 style=" font-size: 2.4em;line-height:45px;font-weight:400;text-shadow: rgb(35 35 35) 0px 0px
+          20px;color:#fff"">Wahyu & Mufarida</h1>
+          <table style="width: 100%;color:#fff">
+            <tbody>
+              <tr>
+                <td></td>
+                <td
+                  style="border-right: 2px solid #fff;width: 150px;text-align: right;padding: 0px 8px 0px 0px;width: 100px;font-size:17px">
+                  <b> Minggu </b>
+                </td>
+                <td style="width: 45px;text-align:center">
+                  <div style="font-size: 30px;padding: 5px 5px;margin: -10px 0px 0px 0px">
+                    <b> 12 </b>
+                  </div>
+                  <div style="margin:-9px 0px -10px 0px;"> 2025 </div>
+                </td>
+                <td
+                  style="border-left: 2px solid #fff;width: 150px;text-align: left;padding: 0px 0px 0px 8px;width: 100px;font-size:17px">
+                  <b> Januari </b>
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </section>
+    <section id="tentang-pasangan" class="section-container as-page">
+      <div style="text-align: center;">
+        <h3>ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</h3>
+        <h3>Assalamualaikum Wr.Wb</h3>
+        <img class="photo-men1" src="assets/foto/photo-men.jpeg" alt="">
+        <h3>Putra A. Pangestu</h3>
+        <p class="ortu">Anak pertama dari Bpk Budi Susanto dan Ibu Retno Triani</p>
+        <img class="photo-girl1" src="assets/foto/photo-girl.jpeg" alt="">
+        <h3>Putri Silvia</h3>
+        <p class="ortu">Anak pertama dari Bpk Joko Suranto dan Ibu Andin Lutfiana</p>
+      </div>
+    </section>
+    <section id="waktu-acara" class="section-container as-page">
+      <div style="text-align: center;">
+        <h2>Save the Date</h2>
+        <div>
+          <div>
+            <h3>Akad Nikah</h3>
+          </div>
+          <div>
+            Minggu<br>
+            00 Januari 0000<br>
+            08.00 - 09.00 WIB<br>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>Resepsi Nikah</h3>
+          </div>
+          <div>
+            Minggu<br>
+            00 Januari 0000<br>
+            09.00 - 14.00 WIB<br>
+          </div>
+          <p>Bertempat di Kediaman Mempelai Wanita Jl Raya Abc No 1, Kota Abcde</p>
+        </div>
+      </div>
+    </section>
+    <section id="lokasi" class="section-container as-page">
+      <div style="text-align: center;">
+        <h2>Lokasi</h2>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7885.349105925427!2d115.22571499999998!3d-8.816613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd25cd3a15a1b23%3A0x2e91e9e0c925ac1b!2sNusa%20Dua!5e0!3m2!1sid!2sid!4v1722349560027!5m2!1sid!2sid"
+            width="95%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p>
+          Jl Raya Abc No 1, Kota Abcde
+        </p>
+        <a target="_blank" href="https://maps.app.goo.gl/piRf1x8L1c5bxaF58">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+          </svg> Petunjuk arah
+        </a>
+      </div>
+    </section>
+    <section id="rekening" class="section-container as-page">
+      <div style="text-align: center;">
+        <h2>Rekening</h2>
+
+        <div>
+          <p class="px-1">
+            BSI<br>
+            Putra A. Pangestu<br>
+            0123456789<br>
+          </p>
+          <p class="px-1">
+            BSI<br>
+            Putri Silvia<br>
+            1234567890<br>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="galeri" class="section-container as-page">
+      <div style="text-align: center;">
+        <h2>Ucapan</h2>
+        <p>
+          <a target="_blank" href="https://ucapan.undanganaja.com/demo1">Kirim Ucapan</a>
+        </p>
+        <div style="height: 4rem;"></div>
+        <h2>Galeri</h2>
+        <p>
+          <a data-fslightbox="gallery" href="assets/foto/1.jpeg">Lihat Galeri</a>
+          <a data-fslightbox="gallery" href="assets/foto/2.jpeg" style="display: none;"></a>
+          <a data-fslightbox="gallery" href="assets/foto/3.jpeg" style="display: none;"></a>
+        </p>
+      </div>
+    </section>
+    <section id="kutipan" class="section-container as-page">
+      <div style="text-align: center;">
+        <p style="margin:20px">
+          "Dan diantara tanda-tanda kekuasaanNya ialah Dia menciptakan untukmu isteri-isteri dari
+          jenismu sendiri, supaya kamu cenderung
+          dan merasa tenteram kepadanya, dan dijadikanNya diantaramu rasa kasih dan sayang.
+          Sesungguhnya pada yang demikian itu
+          benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+          <br>
+          [QS. Ar. Ruum (30):21].
+        </p>
+      </div>
+    </section>
+
+    <section class="section-container">
+      <div style="text-align: center;">
+        <h3>
+          <a target="_blank" href="https://undanganaja.com"
+            style="text-decoration: none; color: black">UndanganAja.com</a>
+        </h3>
+      </div>
+    </section>
+  </div>
+
+
+
+  <section class="section-navigation">
+    <div class="navigation-button-group">
+      <a href="#home" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+        </svg>
+      </a>
+      <a href="#tentang-pasangan" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+        </svg>
+      </a>
+      <a href="#waktu-acara" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+          <path
+            d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708" />
+        </svg>
+      </a>
+      <a href="#lokasi" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+          viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+        </svg>
+      </a>
+      <a href="#rekening" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+          <path
+            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z" />
+        </svg>
+      </a>
+      <a href="#galeri" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-chat-left-heart-fill" viewBox="0 0 16 16">
+          <path
+            d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+        </svg>
+      </a>
+      <a href="#kutipan" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote"
+          viewBox="0 0 16 16">
+          <path
+            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <div id="teg-cover" class="teg-full-center">
+    <div id="teg-box-cover" class="teg-full-center">
+      <div>
+        <img class="bg-1" src="assets/foto/bg-1.png" alt="">
+        <img class="pic-1" src="assets/foto/1.jpeg" alt="">
+        <h3 class="wedd">The Wedding Of</h3>
+        <h1 class="mempelai-1 animate__animated animate__slideInDown animate__delay-0.7s">Wahyu & Mufarida</h1>
+        <p class="kepada">Kepada Yth.<br>
+          Bapak/Ibu/Saudara/i<br><br><br>
+          <b id="teg-kepada">Tamu Undangan</b><br><br><br>
+          di Tempat
+        </p>
+        <noscript>
+          Aktifkan JavaScript pada browser Anda untuk membuka undangan ini.<br>
+        </noscript>
+        <a href="#home" id="teg-tombol-buka" onclick="hideInvitation()"><i class="fa-solid fa-envelope"></i> Buka Undangan</a>
+        <div style="display: none;">
+          <audio id="teg-audio-lagu" controls loop>
+            <source src="musik-jawa.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/fslightbox-basic-3.4.1/fslightbox.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

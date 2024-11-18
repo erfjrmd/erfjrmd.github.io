@@ -1,11 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="assets/images/logo-nav.png" type="image/x-icon">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Glightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
+  <!-- Bs Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
+<style>
+  .tabs-menus {
+    position: fixed;
+    width: 100%;
+    object-fit: cover;
+    top: 96%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .nav-link.pro {
+    font-size: 20px !important;
+    color: #010162 !important;
+    font-weight: 900 !important;
+  }
+
+  .nav-link.pro.active {
+    background-color: #010162 !important;
+    border-radius: 50vw;
+    color: #c5d2f9 !important;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .body-nav-pro {
+    background-color: #ccebff;
+    box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.192);
+  }
+
+  @media only screen and (min-width: 767px) and (max-width: 799px) {
+    #produk {
+      margin-top: 7vh;
+      padding-top: 0rem;
+      padding-bottom: 7.5rem;
+      z-index: 3;
+    }
+  }
+
+  @media (min-width: 280px) and (max-width: 600px) {
+    .nav-link.pro {
+      display: table-cell;
+      font-size: 12px;
+    }
+
+    .nav-link {
+      text-align: center;
+      display: table-cell;
+      font-size: 12px;
+    }
+
+    #produk {
+      margin-top: 12vh !important;
+    }
+
+    .tabs-menus {
+      height: 15%;
+    }
+
+    .body-nav-pro {
+      padding-bottom: 15vh !important;
+    }
+  }
+</style>
+
 <body>
-    <h1>Demo Produk</h1>
+  <div class="background-atas">
+  <!-- Navbar Section Start -->
+  <nav
+    class="navbar navbar-expand-lg p-3 fixed-top navbar-default animate__animated animate__fadeInDown animate__delay-1s">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="logo-nav" src="assets/images/navbar-logo.png" height="50" alt="">
+      </a>
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="https://blog.undanganaja.com">Blog</a>
+          <a class="nav-link" href="https://ucapan.undanganaja.com">Promosi</a>
+          <a class="btn btn-warning ms-5 tombolkontak" href="https://shopee.co.id/undanganaja">
+            <i class="bi bi-cart-fill"></i> Belanja
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar Section End -->
+
+  <!-- Section list produk start -->
+  <section id="produk">
+    <div class="container mt-5">
+      <h1 class="text-center align-items-center fw-bold mb-5">Produk</h1>
+      <p class="text-center align-items-center mb-5" style="line-height: -10vh; font-style:italic;">Silahkan cari kartu
+        undangan yang sesuai dengan minat anda</p>
+      <!-- Navigation tabs -->
+      <ul class="nav tabs-menus justify-content-center body-nav-pro p-4">
+        <li class="nav-item px-3">
+          <a class="nav-link pro all active" data-bs-toggle="tab" href="#semua"><i class="bi bi-three-dots"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pro" data-bs-toggle="tab" href="#nikah"><i class="bi bi-envelope-paper-heart-fill"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pro" data-bs-toggle="tab" href="#khitan"><i class="bi bi-gender-male fw-bolder"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pro" data-bs-toggle="tab" href="#ulangtahun"><i class="bi bi-cake2-fill"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pro" data-bs-toggle="tab" href="#pesta"><i class="bi bi-cup-straw"></i></a>
+        </li>
+      </ul>
+
+      <!-- Tab content for each category -->
+      <div class="tab-content mt-5">
+        <!-- Semua tab -->
+        <div class="tab-pane fade show active" id="semua">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="assets/images/gambar-produk1.png" alt="Produk Semua 1" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="assets/images/gambar-produk1.png" alt="Produk Semua 2" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="assets/images/gambar-produk1.png" alt="Produk Semua 3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <!-- Nikah tab -->
+        <div class="tab-pane fade" id="nikah">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-nikah1.jpg" alt="Produk Nikah 1" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-nikah2.jpg" alt="Produk Nikah 2" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-nikah3.jpg" alt="Produk Nikah 3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <!-- Khitan tab -->
+        <div class="tab-pane fade" id="khitan">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-khitan1.jpg" alt="Produk Khitan 1" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-khitan2.jpg" alt="Produk Khitan 2" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-khitan3.jpg" alt="Produk Khitan 3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <!-- Ulang Tahun tab -->
+        <div class="tab-pane fade" id="ulangtahun">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-ulangtahun1.jpg" alt="Produk Ulang Tahun 1" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-ulangtahun2.jpg" alt="Produk Ulang Tahun 2" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="gambar-ulangtahun3.jpg" alt="Produk Ulang Tahun 3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <!-- Pesta tab -->
+        <div class="tab-pane fade" id="pesta">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="assets/images/gambar-produk2.png" alt="Produk Pesta 1" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="assets/images/gambar-produk2.png" alt="Produk Pesta 2" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+              <img src="assets/images/gambar-produk2.png" alt="Produk Pesta 3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- Section list produk end -->
+
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Glightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+<script type="text/javascript" src="assets/js/floating-wpp.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
 </html>

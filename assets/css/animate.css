@@ -1,0 +1,38 @@
+/* Transition for nav-link */
+.nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Transition for images */
+  .hero-pic1, .hero-pic2, .hero-pic3, .gambar-about {
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-pic1:hover, .hero-pic2:hover, .hero-pic3:hover, .gambar-about:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .5s;
+  }
+  
+  /* Transition for buttons */
+  .btn-primary {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004085;
+    transform: scale(1.05);
+    transition: ease-in-out .5s;
+  }
+  
+  /* Additional animation for gambar-about */
+  .gambar-about {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .gambar-about.animate__animated {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  

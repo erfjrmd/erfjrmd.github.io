@@ -87,7 +87,7 @@ $(document).ready(function () {
 
 /* Fungsi untuk membuka side nav */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("mySidenav").style.width = "200px";
 }
 
 /* Fungsi untuk menutup side nav */

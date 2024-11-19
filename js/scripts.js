@@ -39,7 +39,7 @@ $(document).ready(function () {
                         </div>
                         <div class="card-footer d-flex justify-content-around">
                             <button class="btn btn-primary px-3 preview-btn" data-name="${product.name}" data-image="${product.image}" data-price="${product.price}"><i class="bi bi-eye-fill"></i> Preview</button>
-                            <button class="btn btn-success px-3 checkout-btn" data-name="${product.name}" data-price="${product.price}"><i class="bi bi-bag-check-fill"></i> Checkout</button>
+                            <button class="btn btn-success checkout-btn" data-name="${product.name}" data-price="${product.price}"><i class="bi bi-bag-check-fill"></i> Checkout</button>
                         </div>
                     </div>
                 </div>

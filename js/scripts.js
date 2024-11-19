@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const productContainer = $("#productContainer");
     const pagination = $("#pagination");
-    const productsPerPage = 8; // Jumlah produk per halaman
+    const productsPerPage = 6; // Jumlah produk per halaman
     let currentPage = 1;
     let productsData = [];
     let filteredProducts = []; // Menyimpan hasil pencarian

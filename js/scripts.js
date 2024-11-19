@@ -64,7 +64,7 @@ $(document).ready(function () {
         for (let i = 1; i <= totalPages; i++) {
             const pageItem = `
                 <li class="page-item ${i === currentPage ? "active" : ""}">
-                    <a class="page-link" href="#" data-page="${i}">${i}</a>
+                    <a class="page-link" href="#backToTop" data-page="${i}">${i}</a>
                 </li>
             `;
             pagination.append(pageItem);

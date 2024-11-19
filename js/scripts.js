@@ -31,7 +31,7 @@ $(document).ready(function () {
         productsToDisplay.forEach((product) => {
             const productCard = `
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                         <img src="${product.image}" class="card-img-top" alt="${product.name}">
                         <div class="card-body text-center">
                             <h5 class="fw-bold">${product.name}</h5>
@@ -83,3 +83,14 @@ $(document).ready(function () {
         renderProducts(currentPage);
     });
 });
+
+
+/* Fungsi untuk membuka side nav */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+/* Fungsi untuk menutup side nav */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}

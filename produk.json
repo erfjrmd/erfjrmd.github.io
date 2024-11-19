@@ -22,5 +22,53 @@
         "price": "$40.00",
         "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
         "category": "Popular"
+    },
+    {
+        "name": "Fancy Product",
+        "price": "$40.00 - $80.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Fancy"
+    },
+    {
+        "name": "Special Item",
+        "price": "$18.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Special"
+    },
+    {
+        "name": "Sale Item",
+        "price": "$25.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Sale"
+    },
+    {
+        "name": "Popular Item",
+        "price": "$40.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Popular"
+    },
+    {
+        "name": "Fancy Product",
+        "price": "$40.00 - $80.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Fancy"
+    },
+    {
+        "name": "Special Item",
+        "price": "$18.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Special"
+    },
+    {
+        "name": "Sale Item",
+        "price": "$25.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Sale"
+    },
+    {
+        "name": "Popular Item",
+        "price": "$40.00",
+        "image": "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "category": "Popular"
     }
 ]

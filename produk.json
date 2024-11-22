@@ -14,39 +14,45 @@
         "link": "./demo/demo2"
     },
     {
-        "name": "Rustic Style Invitation",
-        "price": "Rp130.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Rustic"
+        "name": "Wedding-3",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Wedding",
+        "link": "./demo/demo3"
     },
     {
-        "name": "Floral Digital Invitation",
-        "price": "Rp110.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Floral"
+        "name": "Wedding-4",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Wedding",
+        "link": "./demo/demo4"
     },
     {
-        "name": "Minimalist Wedding Invite",
-        "price": "Rp140.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Minimalist"
+        "name": "Khitan-1",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Khitan",
+        "link": "./demo/demo5"
     },
     {
-        "name": "Animated Digital Invitation",
-        "price": "Rp200.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Animated"
+        "name": "Khitan-2",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Khitan",
+        "link": "./demo/demo6"
     },
     {
-        "name": "Classic Style Invitation",
-        "price": "Rp125.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Classic"
+        "name": "Ultah-1",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Ulang tahun",
+        "link": "./demo/demo7"
     },
     {
-        "name": "Luxury Wedding Invite",
-        "price": "Rp250.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Luxury"
+        "name": "Ultah-2",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Ulang tahun",
+        "link": "./demo/demo8"
     }
 ]

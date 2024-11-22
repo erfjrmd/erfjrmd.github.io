@@ -20,26 +20,27 @@ $(document).ready(function () {
         });
     });
 
-    // Fungsi untuk merender produk berdasarkan halaman
     function renderProducts(page) {
         productContainer.empty(); // Kosongkan kontainer produk
         const startIndex = (page - 1) * productsPerPage;
         const endIndex = page * productsPerPage;
-
+    
         const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
-
+    
         productsToDisplay.forEach((product) => {
             const productCard = `
                 <div class="col-md-4 mb-4">
                     <div class="card h-100" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">${product.name}</h5>
-                            <p class="text-muted">${product.price}</p>
-                        </div>
+                        <a href="${product.link}" target="_blank" class="stretched-link" style="text-decoration: none; color: inherit;">
+                            <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">${product.name}</h5>
+                                <p class="text-muted">${product.price}</p>
+                            </div>
+                        </a>
                         <div class="card-footer d-flex justify-content-around">
                             <button class="btn btn-primary px-3 preview-btn" data-name="${product.name}" data-image="${product.image}" data-price="${product.price}"><i class="bi bi-eye-fill"></i> Preview</button>
-                            <button class="btn btn-success checkout-btn" data-name="${product.name}" data-price="${product.price}"><i class="bi bi-bag-check-fill"></i> Checkout</button>
+                            <button class="btn btn-success checkout-btn" data-name="${product.name}" data-price="${product.price}"><i class="bi bi-bag-check-fill"></i> Gunakan</button>
                         </div>
                     </div>
                 </div>

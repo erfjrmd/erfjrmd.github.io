@@ -1,15 +1,17 @@
 [
     {
-        "name": "Elegant Wedding Invitation",
-        "price": "Rp150.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Elegant"
+        "name": "Wedding-1",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-1.png",
+        "category": "Wedding",
+        "link": "./demo/demo1"
     },
     {
-        "name": "Modern Digital Invitation",
-        "price": "Rp120.000",
-        "image": "https://dummyimage.com/450x300/f0e8e0/5a4a3f.jpg",
-        "category": "Modern"
+        "name": "Wedding-2",
+        "price": "Rp75.000",
+        "image": "./produk-pic/wedding-2.png",
+        "category": "Wedding",
+        "link": "./demo/demo2"
     },
     {
         "name": "Rustic Style Invitation",

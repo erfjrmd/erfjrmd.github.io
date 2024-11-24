@@ -4,55 +4,63 @@
         "price": "Rp75.000",
         "image": "./produk-pic/wedding-1.png",
         "category": "Wedding",
-        "link": "./demo/demo1"
+        "link": "./demo/demo1",
+        "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Wedding-2",
         "price": "Rp75.000",
         "image": "./produk-pic/wedding-2.png",
         "category": "Wedding",
-        "link": "./demo/demo2"
+        "link": "./demo/demo2",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Wedding-3",
         "price": "Rp75.000",
         "image": "./produk-pic/wedding-3.png",
         "category": "Wedding",
-        "link": "./demo/demo3"
+        "link": "./demo/demo3",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Wedding-4",
         "price": "Rp75.000",
         "image": "./produk-pic/wedding-4.png",
         "category": "Wedding",
-        "link": "./demo/demo4"
+        "link": "./demo/demo4",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Khitan-1",
         "price": "Rp75.000",
         "image": "./produk-pic/khitan-1.jpg",
         "category": "Khitan",
-        "link": "./demo/demo5"
+        "link": "./demo/demo5",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Khitan-2",
         "price": "Rp75.000",
         "image": "./produk-pic/khitan-2.jpg",
         "category": "Khitan",
-        "link": "./demo/demo6"
+        "link": "./demo/demo6",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Ultah-1",
         "price": "Rp75.000",
         "image": "./produk-pic/ultah-1.jpg",
         "category": "Ulang tahun",
-        "link": "./demo/demo7"
+        "link": "./demo/demo7",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     },
     {
         "name": "Ultah-2",
         "price": "Rp75.000",
         "image": "./produk-pic/ultah-2.jpg",
         "category": "Ulang tahun",
-        "link": "./demo/demo8"
+        "link": "./demo/demo8",
+         "Auth": "https://ucapan.undanganaja.com/auth"
     }
 ]

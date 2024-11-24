@@ -89,24 +89,12 @@
     <section class="py-4">
         <div class="container">
             <div class="container">
-                <!-- Modal Bootstrap untuk peringatan login -->
-                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="loginModalLabel">Peringatan</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Anda harus login terlebih dahulu sebelum membuat undangan !!!
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                                <button type="button" class="btn btn-primary">Login</button>
-                            </div>
-                        </div>
+                <!-- Alert Bootstrap yang akan muncul ketika tombol "Gunakan" ditekan -->
+                <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+                    <div id="alert" class="alert alert-success alert-dismissible fade text-justify" role="alert">
+                        <strong>Produk telah dipilih!</strong> Anda memilih produk <span id="alert-product-name"></span>
+                        dengan harga <span id="alert-product-price"></span><span>Untuk mengubah tampilan anda harus login terlebih dahulu</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 </div>
 

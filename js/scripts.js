@@ -48,8 +48,21 @@ $(document).ready(function () {
 
         // Event handler untuk tombol Checkout (Gunakan)
         $(".checkout-btn").on("click", function () {
-            // Menampilkan modal peringatan login
-            $('#loginModal').modal('show');
+            const name = $(this).data("name");
+            const price = $(this).data("price");
+
+            // Update alert content
+            $("#alert-product-name").text(name);
+            $("#alert-product-price").text(price);
+
+            // Tampilkan alert Bootstrap
+            const alertElement = $("#alert");
+            alertElement.addClass("show");
+
+            // Hide alert after 5 seconds
+            setTimeout(function() {
+                alertElement.removeClass("show");
+            }, 5000);
         });
     }
 

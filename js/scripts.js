@@ -48,11 +48,8 @@ $(document).ready(function () {
 
         // Event handler untuk tombol Checkout (Gunakan)
         $(".checkout-btn").on("click", function () {
-            // Menunda tampilan modal selama 2 detik (2000 ms)
-            setTimeout(function() {
-                // Tampilkan modal peringatan login
-                $('#loginModal').modal('show');
-            },2000); // 2 detik delay sebelum modal muncul
+            // Menampilkan modal peringatan login
+            $('#loginModal').modal('show');
         });
     }
 

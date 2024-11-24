@@ -52,7 +52,7 @@ $(document).ready(function () {
             setTimeout(function() {
                 // Tampilkan modal peringatan login
                 $('#loginModal').modal('show');
-            },5000); // 2 detik delay sebelum modal muncul
+            },2000); // 2 detik delay sebelum modal muncul
         });
     }
 

@@ -37,8 +37,8 @@ $(document).ready(function () {
                             <p class="text-muted">${product.price}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-around">
-                            <a href="${product.link}"><button class="btn btn-primary px-3 preview-btn" data-name="${product.name}" data-image="${product.image}" data-price="${product.price}"><i class="bi bi-eye-fill"></i> Preview</button></a>
-                            <a href="${product.Auth}"><button class="btn btn-success px-3 checkout-btn" data-name="${product.name}" data-price="${product.price}"><i class="bi bi-bag-check-fill"></i> Gunakan</button></a>
+                            <a href="${product.link}"><button class="btn btn-primary preview-btn" data-name="${product.name}" data-image="${product.image}" data-price="${product.price}"><i class="bi bi-eye-fill"></i> Preview</button></a>
+                            <a href="${product.Auth}"><button class="btn btn-success checkout-btn" data-name="${product.name}" data-price="${product.price}"><i class="bi bi-bag-check-fill"></i> Gunakan</button></a>
                         </div>
                     </div>
                 </div>

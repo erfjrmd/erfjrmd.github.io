@@ -16,42 +16,42 @@
     {
         "name": "Wedding-3",
         "price": "Rp75.000",
-        "image": "./produk-pic/wedding-2.png",
+        "image": "./produk-pic/wedding-3.png",
         "category": "Wedding",
         "link": "./demo/demo3"
     },
     {
         "name": "Wedding-4",
         "price": "Rp75.000",
-        "image": "./produk-pic/wedding-2.png",
+        "image": "./produk-pic/wedding-4.png",
         "category": "Wedding",
         "link": "./demo/demo4"
     },
     {
         "name": "Khitan-1",
         "price": "Rp75.000",
-        "image": "./produk-pic/wedding-2.png",
+        "image": "./produk-pic/khitan-1.jpg",
         "category": "Khitan",
         "link": "./demo/demo5"
     },
     {
         "name": "Khitan-2",
         "price": "Rp75.000",
-        "image": "./produk-pic/wedding-2.png",
+        "image": "./produk-pic/khitan-2.jpg",
         "category": "Khitan",
         "link": "./demo/demo6"
     },
     {
         "name": "Ultah-1",
         "price": "Rp75.000",
-        "image": "./produk-pic/wedding-2.png",
+        "image": "./produk-pic/ultah-1.jpg",
         "category": "Ulang tahun",
         "link": "./demo/demo7"
     },
     {
         "name": "Ultah-2",
         "price": "Rp75.000",
-        "image": "./produk-pic/wedding-2.png",
+        "image": "./produk-pic/ultah-2.jpg",
         "category": "Ulang tahun",
         "link": "./demo/demo8"
     }

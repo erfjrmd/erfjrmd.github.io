@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bagikan Undangan</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    a.btn-share {
+        background-color: #572c19;
+        color: #fcd29f;
+        border-radius: 20px;
+    }
+</style>
+<body>
+
+    <noscript>
+        <div>
+            Aktifkan JavaScript pada browser Anda untuk menggunakan fitur ini.<br />
+        </div>
+    </noscript>
+
+    <a class="btn-share" id="link" href="#">Klik Disini</a>
+    
+    <script>
+        var urlTujuan = new URL("https://ucapan.undanganaja.com/dashboard-share");
+        urlTujuan.searchParams.append("version", '1.0.0');
+        urlTujuan.searchParams.append("origin", window.location.href);
+        document.getElementById('link').href = urlTujuan;
+        window.location.href = urlTujuan;
+    </script>
+</body>
+</html>

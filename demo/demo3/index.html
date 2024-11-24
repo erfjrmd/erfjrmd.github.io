@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding - 3</title>
+  <link rel="shortcut icon" href="assets/foto/logo-nav.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.cdnfonts.com/css/meldina" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="assets/js/disable.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap');
+    @import url('https://fonts.cdnfonts.com/css/paula-natalie');
+
+    /* cover */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-size: 100%;
+      padding: 0;
+      margin: 0;
+      visibility: hidden;
+      font-family: 'Philosopher', serif;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      background: #272727;
+      visibility: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .teg-full-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Gambar background */
+    img.bg-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      z-index: -1;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .bg-2 {
+      position: relative;
+      width: 100%;
+      height: 95vh;
+      margin: 0 auto;
+      background-image:
+        linear-gradient(to bottom,
+          rgba(245, 245, 245, 0) 30%,
+          rgb(0, 0, 0) 100%),
+        url('assets/foto/mempelai.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h3.salam {
+      color: #ffff;
+      letter-spacing: 2px;
+    }
+
+    .content-1st {
+      bottom: 15vh;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 7px;
+      padding-right: 7px;
+      text-align: center;
+      margin-top: 30vh;
+      letter-spacing: 1px;
+      text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.917);
+    }
+
+    #home {
+      position: relative;
+    }
+
+    #tentang-pasangan {
+      line-height: 70%;
+      padding: 0 10vh;
+      margin-top: 0vh;
+      color: #572c19;
+      background: url('assets/foto/bg-3.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 620px;
+      overflow: hidden;
+    }
+
+    #waktu-acara {
+      padding: 0 10vw;
+      background: url('assets/foto/bg-3.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 1200px;
+      color: #572c19;
+      overflow: hidden;
+    }
+
+    #rekening {
+      background: url('assets/foto/bg-3.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 620px;
+      overflow: hidden;
+      color: #572c19;
+    }
+
+    #galeri {
+      background: url('assets/foto/bg-ucapan.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 620px;
+      overflow: hidden;
+      color: #572c19;
+    }
+
+    #kutipan {
+      background: url('assets/foto/bg-3.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 620px;
+      overflow: hidden;
+      color: #572c19;
+    }
+
+    b#teg-kepada {
+      color: #572c19;
+      padding: 2.5vh 5vw;
+      background-color: #ffff;
+      border-radius: 20px;
+      text-transform: capitalize;
+    }
+
+    /* Overlay */
+    #teg-cover {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.801);
+      z-index: 1200;
+      visibility: visible;
+    }
+
+    /* Box yang muncul di atas overlay */
+    #teg-box-cover {
+      background-color: rgba(0, 0, 0, 0.596);
+      color: black;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      text-align: center;
+      z-index: 1300;
+      visibility: visible;
+    }
+
+    a#teg-tombol-buka {
+      cursor: pointer;
+      border: none;
+      padding: 1vh 3vw;
+      border-radius: 20px;
+      background-color: #fcd29f;
+      transition: transform 0.5s, background-color 0.6s, box-shadow 0.5s;
+      text-decoration: none;
+      color: #000;
+    }
+
+    a#teg-tombol-buka:hover {
+      background-color: #fcb470;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    a#teg-tombol-buka:active {
+      transform: scale(0.95);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      background-color: #ffab60;
+    }
+
+    h3.wedd {
+      font-size: 20px;
+      color: #fcd29f;
+    }
+
+    h1.mempelai-1 {
+      font-family: 'Paula Natalie', sans-serif;
+      color: #fcd29f;
+      letter-spacing: 1px;
+      text-shadow: rgb(35 35 35) 0px 2px 20px
+    }
+
+    h1.mempelai-2 {
+      color: #ffffff;
+    }
+
+    p.kepada {
+      color: #fcd29f;
+    }
+
+    p.ortu {
+      font-size: 12px;
+    }
+
+    /* basic */
+    .section-container {
+      min-height: calc(85vh - 57px);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-navigation {
+      position: fixed;
+      bottom: -5px;
+      z-index: 100;
+      text-align: center;
+      width: 100%;
+    }
+
+    .navigation-button-group {
+      display: flex;
+      height: 56px;
+      width: 100%;
+      background-color: #000;
+      color: #fcd29f;
+    }
+
+    .button-nav {
+      text-decoration: none;
+      height: 50px;
+      margin: 3px;
+      width: 100%;
+      background-color: transparent;
+      color: #fcd29f;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pic-1 {
+      object-fit: cover;
+      height: 15rem;
+      width: 10rem;
+      border-radius: 50px 20px 50px 20px;
+      border: #fcd29f solid 3px;
+      box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.288);
+    }
+
+    img.photo-girl1,
+    img.photo-men1 {
+      height: 10rem;
+      width: auto;
+      border-radius: 50px;
+      border: #703e00 solid 3px;
+      box-shadow: 0 5px 15px 10px rgba(0, 0, 0, 0.250);
+    }
+
+    p.text-home {
+      font-size: 17px;
+      color: #572c19;
+      font-weight: 900;
+    }
+
+    @media only screen and (min-width: 426px) {
+      .container-central {
+        max-width: 560px;
+        margin: auto;
+      }
+
+      .frame-1 img,
+      .frame-2 img {
+        width: 15%;
+      }
+
+      #waktu-acara {
+        padding: 0 1vw;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .navigation-button-group {
+        width: 576px;
+        margin: auto;
+        margin-bottom: 5px;
+        border-radius: 5px;
+      }
+    }
+
+    .hide {
+      overflow: hidden;
+      width: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .button-nav,
+    .hide {
+      transition: width 0.7s linear, margin 0.7s linear, padding 0.7s linear;
+    }
+
+    .invert-effect {
+      color: #a0522d;
+      border-left: 1px solid #a0522d;
+      border-right: 1px solid #a0522d;
+    }
+
+    #floatingButton {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #fcd29f;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      user-select: none;
+    }
+
+    #floatingButton:active {
+      transform: scale(0.95);
+    }
+
+    /* Agar tombol bisa dipindah-pindah */
+    #floatingButton.draggable {
+      cursor: grab;
+    }
+
+    #floatingButton:active.draggable {
+      cursor: grabbing;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .frame-1 img {
+      width: 25%;
+      position: absolute;
+      top: -2%;
+      right: 72.5%;
+      margin: 10px;
+    }
+
+    .frame-2 img {
+      width: 25%;
+      position: absolute;
+      top: -2%;
+      left: 72%;
+      margin: 10px;
+      transform: scaleX(-1);
+    }
+
+    .frame-3 img {
+      width: 30%;
+      position: absolute;
+      bottom: -1.7%;
+      right: 72.5%;
+      margin: 10px 30px;
+    }
+
+    .frame-4 img {
+      width: 30%;
+      position: absolute;
+      bottom: -1.7%;
+      left: 72%;
+      margin: 10px 30px;
+      transform: scaleX(-1);
+    }
+
+    .frame-k1 img {
+      width: 25%;
+      position: absolute;
+      top: -2%;
+      right: 72.5%;
+      margin: 10px;
+    }
+
+    .frame-k2 img {
+      width: 25%;
+      position: absolute;
+      top: -2%;
+      left: 72%;
+      margin: 10px;
+      transform: scaleX(-1);
+    }
+
+    .frame-k3 img {
+      width: 22%;
+      position: absolute;
+      bottom: -1.1%;
+      right: 72.5%;
+      margin: 10px 30px;
+    }
+
+    .frame-k4 img {
+      width: 23%;
+      position: absolute;
+      bottom: -1.1%;
+      left: 72%;
+      margin: 10px 30px;
+      transform: scaleX(-1);
+    }
+
+    .frame-f1 img {
+      width: 25%;
+      position: absolute;
+      top: -2%;
+      right: 77%;
+      margin: 10px;
+    }
+
+    .frame-f2 img {
+      width: 25%;
+      position: absolute;
+      top: -2%;
+      left: 77%;
+      margin: 10px;
+      transform: scaleX(-1);
+    }
+
+    .frame-f1 img,
+    .frame-f2 img {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce-1 {
+
+      0%,
+      100% {
+        transform: rotateZ(0);
+      }
+
+      50% {
+        transform: rotateZ(-15deg);
+      }
+    }
+
+    .frame-3 img {
+      animation: bounce-1 5s infinite ease-in-out;
+    }
+
+    @keyframes bounce-2 {
+
+      0%,
+      100% {
+        transform: rotateZ(0);
+      }
+
+      50% {
+        transform: rotateZ(15deg);
+      }
+    }
+
+    .frame-4 img {
+      animation: bounce-2 5s infinite ease-in-out;
+    }
+
+    .frameF-1 img {
+      width: 40%;
+      position: absolute;
+      top: -1.5%;
+      right: 58%;
+      margin: 10px;
+    }
+
+    .frameF-2 img {
+      width: 40%;
+      position: absolute;
+      bottom: -1%;
+      left: 53.5%;
+      margin: 10px 30px;
+    }
+
+    @keyframes grow-and-shrink {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.3);
+      }
+    }
+
+    .frameF-1 img,
+    .frameF-2 img {
+      animation: grow-and-shrink 1800ms;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    .container-acara {
+      text-align: center;
+    }
+
+    .container-rek {
+      background-color: #fbdcb778;
+      padding: 20px 30px;
+      border-radius: 15px;
+      border-width: 10px;
+      border-style: double;
+      border-color: #572c19;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 3.192);
+      border-left: #572c19 2px solid;
+      min-height: 490px;
+    }
+
+    .container-send {
+      background-color: #572c19;
+      color: #fcd29f;
+      padding: 8px 15px;
+      border-radius: 20px 10px 20px 10px;
+    }
+
+    .zoom {
+      transition: transform .5s;
+    }
+
+    .zoom.scaled {
+      transform: scale(1.111);
+    }
+
+    a.btn-location {
+      padding: 10px 20px;
+      background-color: #703e00;
+      color: #fcd29f;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.192);
+    }
+
+    a.btn-location:hover {
+      color: #703e00;
+      background-color: #fcd29f;
+      transition: all ease-in-out 1s;
+    }
+
+    .btn-ucapan,
+    .btn-galeri {
+      padding: 10px 20px;
+      background-color: #703e00;
+      color: #fcd29f;
+      border-radius: 50px 20px 50px 20px;
+      text-decoration: none;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.192);
+    }
+
+    .btn-rek1,
+    .btn-rek2 {
+      border: none;
+      border-radius: 10px;
+      background-color: #fcb470;
+      color: #572c19;
+      padding: 5px 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .btn-cashless {
+      border: none;
+      padding: 10px 20px;
+      background-color: #703e00;
+      color: #fcd29f;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.192);
+      cursor: pointer;
+    }
+
+    .btn-rek1:hover {
+      background-color: #0b7dda;
+      color: #ffff;
+      transition: ease-in 1s;
+    }
+
+    .btn-rek2:hover {
+      background-color: #0055bc;
+      color: #ffff;
+      transition: ease-in 1s;
+    }
+
+    /* Mengubah warna latar belakang notifikasi sukses */
+    .alertify-notifier .ajs-message.ajs-success {
+      background-color: #fcd29f !important;
+      /* Hijau untuk sukses */
+      color: #572c19 !important;
+      /* Warna teks */
+      border-radius: 8px;
+      /* Membuat sudut lebih halus */
+      font-size: 14px;
+      /* Ukuran teks */
+      padding: 10px 20px;
+      /* Spasi dalam */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Bayangan */
+    }
+
+    /* Mengubah warna latar belakang notifikasi error */
+    .alertify-notifier .ajs-message.ajs-error {
+      background-color: #704b00 !important;
+      /* Merah untuk error */
+      color: #fcb470 !important;
+      /* Warna teks */
+      border-radius: 8px;
+      font-size: 12px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animasi masuk */
+    .alertify-notifier .ajs-message {
+      animation: slideIn 0.5s ease-out;
+    }
+
+    /* Animasi keluar */
+    .alertify-notifier .ajs-message.ajs-hidden {
+      animation: slideOut 0.5s ease-in;
+    }
+
+    /* Keyframes untuk animasi slide masuk */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Keyframes untuk animasi slide keluar */
+    @keyframes slideOut {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      to {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+
+    .alertify .ajs-button:hover {
+      background-color: #0b7dda !important;
+    }
+
+    /* Notifikasi lebih kecil */
+    .alertify-notifier .ajs-message {
+      max-width: 300px;
+      text-align: center;
+      padding: 10px 15px;
+    }
+
+    .bank-info-container {
+      display: none;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+
+    .bank-info-container.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .bank-info {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      margin-bottom: -15px;
+    }
+
+    .logo-bank {
+      width: 50px;
+      /* Adjust size as needed */
+      height: auto;
+      margin-right: 10px;
+      /* Space between logo and text */
+    }
+
+    .px-1 {
+      padding: 15px 10px;
+      border-radius: 20px;
+      border: 2px solid #703e00;
+      background-color: #fcd29f;
+      text-align: left;
+      /* Align text to the left of the logo */
+    }
+
+    .container-ucapan {
+      background-color: #fcd29f8f;
+      padding: 3vh 10vw;
+      border-width: 8px;
+      border-style: double;
+      border-color: #572c19;
+      border-radius: 15px;
+      border-left: 10px solid;
+      border-right: 10px solid;
+    }
+
+    .container-galeri {
+      background-color: #fcd29f8f;
+      padding: 3vh 10vw;
+      border-width: 8px;
+      border-style: double;
+      border-color: #572c19;
+      border-radius: 15px;
+      border-left: 10px solid;
+      border-right: 10px solid;
+    }
+
+    #footer {
+      background: url('assets/foto/bg-3.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: calc(25vh - 57px);
+      padding-bottom: 7vh;
+      overflow: hidden;
+    }
+
+    #footer h3 a {
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      background-color: #fcb470;
+      color: #572c19;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #footer h3 a:hover {
+      padding: 8px 15px;
+      background-color: #703e00;
+      color: #fcb470;
+      border-radius: 20px;
+      transition: all ease-in-out 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="floatingButton"><i class="fa fa-play"></i></button>
+  <div class="container-central">
+    <section id="home" class="as-page">
+      <div class="bg-2"></div>
+      <div class="content-1st" data-aos="fade-down" data-aos-duration="3000">
+        <h3 class="salam"><i class="fa-solid fa-calendar-check"></i> Save The Date</h3>
+        <h1 style=" font-size: 2em;line-height:10px;font-weight:400;text-shadow: rgb(35 35 35) 0px 0px
+          20px;color:#fff;font-family: 'Paula Natalie', sans-serif;">Wahyu &
+          Mufarida
+        </h1>
+        <table style="width: 100%;color:#fff;">
+          <tbody>
+            <tr>
+              <td></td>
+              <td
+                style="border-right: 2px solid #fff;width: 150px;text-align: right;padding: 0px 8px 0px 0px;width: 100px;font-size:17px">
+                <b> Minggu </b>
+              </td>
+              <td style="width: 45px;text-align:center">
+                <div style="font-size: 30px;padding: 5px 5px;margin: -10px 0px 0px 0px">
+                  <b> 12 </b>
+                </div>
+                <div style="margin:-9px 0px -10px 0px;"> 2025 </div>
+              </td>
+              <td
+                style="border-left: 2px solid #fff;width: 150px;text-align: left;padding: 0px 0px 0px 8px;width: 100px;font-size:17px">
+                <b> Januari </b>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tentang-pasangan" class="section-container relative as-page">
+      <div class="frame-1"><img src="assets/foto/frame-1.png" alt=""></div>
+      <div class="frame-2"><img src="assets/foto/frame-1.png" alt=""></div>
+      <div style="text-align: center;" data-aos="fade-down" data-aos-duration="1500">
+        <img src="assets/foto/assalamualaikum.png"
+          style="height: 30px; margin-top: 3vh;filter: brightness(0) saturate(100%) invert(15%) sepia(96%) saturate(1385%) hue-rotate(28deg) brightness(95%) contrast(95%);"
+          alt="" data-aos="fade-down">
+        <h4 data-aos="fade-down">Assalamualaikum Wr.Wb</h4>
+        <img class="photo-men1" src="assets/foto/cut2.jpg" alt="">
+        <h3>Wahyu D. Kurniawan</h3>
+        <p class="ortu">Anak Laki-Laki dari Bpk M.Nanang S dan Ibu Qomariyah</p>
+        <img class="photo-girl1" src="assets/foto/cut1.jpg" alt="">
+        <h3>Mufaridatul Rofi'ah</h3>
+        <p class="ortu">Anak Perempuan dari Bpk S.Catur Kurniawan dan Sanimah</p>
+      </div>
+      <div class="frame-3"><img src="assets/foto/wp.png" alt=""></div>
+      <div class="frame-4"><img src="assets/foto/ww.png" alt=""></div>
+    </section>
+
+    <section id="waktu-acara" class="section-container as-page">
+      <div class="container-acara" data-aos="fade-down" data-aos-duration="1500">
+        <h2><i class="fa-solid fa-bookmark"></i> Detail Acara</h2>
+        <div class="container-akad zoom"
+          style="background-color: #fcd29f4b;padding-bottom:3rem;padding-top:1.5rem;border:2px solid#703e00;border-radius:20px;margin-bottom: 35px;box-shadow: 0 5px 15px 10px rgba(0, 0, 0, 0.177);">
+          <div>
+            <h2><i class="fa-solid fa-handshake"></i> Akad Nikah</h2>
+          </div>
+          <div>
+            Minggu<br>
+            12 Januari 2025<br>
+            07.00 WIB - Selesai<br>
+          </div>
+        </div>
+        <!-- Resepsi start -->
+        <div class="container-resepsi zoom"
+          style="background-color: #fcd29f4b;padding-bottom:3rem;padding-top:1.5rem;border:2px solid#703e00;border-radius:20px;margin-bottom: 35px;box-shadow: 0 5px 15px 10px rgba(0, 0, 0, 0.177);">
+          <div>
+            <h2><i class="fa-solid fa-map-location-dot"></i> Resepsi Nikah</h2>
+          </div>
+          <div>
+            Minggu<br>
+            12 Januari 2025<br>
+            09.00 WIB - Selesai<br>
+          </div>
+          <p style="padding: 0 5vw;"><b>Lokasi Acara :</b><br><br>Dsn. Bogangin Lor ,
+            Ds.Padangan, Kayen Kidul, Kab.Kediri</p><br>
+          <a class="btn-location" href="https://maps.app.goo.gl/jmVP5kqE5DSB6eZZ7"><i
+              class="fa-solid fa-location-arrow"></i> Rute Googlemaps</a>
+        </div>
+        <!-- Ngunduh mantu start -->
+        <div class="container-mantu zoom"
+          style="background-color: #fcd29f4b;padding-bottom:3rem;padding-top:1.5rem;border:2px solid#703e00;border-radius:20px;margin-bottom: 35px;box-shadow: 0 5px 15px 10px rgba(0, 0, 0, 0.177);">
+          <div>
+            <h2><i class="fa-solid fa-map-location-dot"></i> Ngunduh Mantu</h2>
+          </div>
+          <div>
+            Senin<br>
+            13 Januari 2025<br>
+            09.00 WIB - Selesai<br>
+          </div>
+          <p style="padding: 0 5vw;"><b>Lokasi Acara :</b><br><br> Dsn.ngetrep Sekaran, Kayen kidul, Kab.Kediri
+          </p><br>
+          <a class="btn-location" href="https://maps.app.goo.gl/4oMCSLH3zkanjYATA"><i
+              class="fa-solid fa-location-arrow"></i> Rute Googlemaps</a>
+        </div>
+        <!-- End -->
+      </div>
+    </section>
+
+    <section id="rekening" class="section-container as-page">
+      <div class="container-rek" style="text-align: center;" data-aos="fade-down" data-aos-duration="1500">
+        <h2 class="container-send"><i class="fa-solid fa-gift"></i> Tanda Kasih</h2>
+        <p>Kirim Hadiah pada alamat dibawah ini</p><br>
+        <a class="btn-location" href="https://maps.app.goo.gl/jmVP5kqE5DSB6eZZ7"><i class="fa-solid fa-gift"></i> Rute Googlemaps</a><br><br><br>
+        <button id="cashless-btn" class="btn-cashless"><i class="fa-regular fa-credit-card"></i> Kirim Non-Tunai</button>
+        <div class="bank-info-container">
+          <div class="bank-info">
+            <img src="assets/foto/BCA.webp" alt="Logo BCA" class="logo-bank">
+            <p class="px-1" style="padding-right: 52px;">
+              Wahyu .D Kurniawan<br>
+              <span id="account1">1401139023</span>
+              <button class="btn-rek1"><i class="fa-solid fa-copy"></i> Salin</button>
+            </p>
+          </div>
+          <div class="bank-info">
+            <img src="assets/foto/Logo-Bank-BRI.png" alt="Logo BRI" class="logo-bank">
+            <p class="px-1">
+              Wahyu .D Kurniawan<br>
+              <span id="account2">627901027541533</span>
+              <button class="btn-rek2"><i class="fa-solid fa-copy"></i> Salin</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="galeri" class="section-container relative as-page">
+      <div class="frameF-1"><img src="assets/foto/frame-flow1.png" alt=""></div>
+      <div style="text-align: center;">
+        <div class="container-ucapan" data-aos="fade-right" data-aos-duration="1500">
+          <h2><i class="fa-solid fa-comments"></i> Ucapan</h2>
+          <p>
+            <a class="btn-ucapan" target="_blank"
+              href="https://ucapan.undanganaja.com/index.php/kehadiran/wahyu-rida">Kirim Ucapan</a>
+          </p>
+        </div>
+        <div style="height: 4rem;"></div>
+        <div class="container-galeri" data-aos="fade-left" data-aos-duration="1500">
+          <h2><i class="fa-solid fa-images"></i> Galeri</h2>
+          <p>
+            <a class="btn-galeri" data-fslightbox="gallery" href="assets/foto/wr-1.jpg">Lihat Galeri</a>
+            <a data-fslightbox="gallery" href="assets/foto/wr-2.jpg" style="display: none;"></a>
+            <a data-fslightbox="gallery" href="assets/foto/wr-3.jpg" style="display: none;"></a>
+            <a data-fslightbox="gallery" href="assets/foto/wr-4.jpg" style="display: none;"></a>
+          </p>
+        </div>
+      </div>
+      <div class="frameF-2"><img src="assets/foto/frame-flow2.png" alt=""></div>
+    </section>
+
+    <section id="kutipan" class="section-container relative as-page">
+      <div class="frame-k1"><img src="assets/foto/frame-1.png" alt=""></div>
+      <div class="frame-k2"><img src="assets/foto/frame-1.png" alt=""></div>
+      <div style="text-align: center;" data-aos="fade-down" data-aos-duration="1500">
+        <h3></h3>
+        <p style="margin:20px">
+          "Dan diantara tanda-tanda kekuasaanNya ialah Dia menciptakan untukmu isteri-isteri dari
+          jenismu sendiri, supaya kamu cenderung
+          dan merasa tenteram kepadanya, dan dijadikanNya diantaramu rasa kasih dan sayang.
+          Sesungguhnya pada yang demikian itu
+          benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+          <br><br>
+          <b>[QS. Ar. Ruum (30):21].</b>
+        </p>
+      </div>
+      <div class="frame-k3"><img src="assets/foto/frame-2.png" alt=""></div>
+      <div class="frame-k4"><img src="assets/foto/frame-2.png" alt=""></div>
+    </section>
+
+    <section id="footer" class="section-container relative">
+      <div style="text-align: center;">
+        <div class="frame-f1"><img src="assets/foto/f-component1.png" alt=""></div>
+        <div class="frame-f2"><img src="assets/foto/f-component2.png" alt=""></div>
+        <h3>
+          <a target="_blank" href="https://undanganaja.com"><i class="fa-solid fa-globe"></i> UndanganAja.com</a>
+        </h3>
+      </div>
+    </section>
+  </div>
+
+  <section class="section-navigation">
+    <div class="navigation-button-group">
+      <a href="#home" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+        </svg>
+      </a>
+      <a href="#tentang-pasangan" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+        </svg>
+      </a>
+      <a href="#waktu-acara" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+          <path
+            d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708" />
+        </svg>
+      </a>
+      <!-- <a href="#lokasi" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+          viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+        </svg>
+      </a> -->
+      <a href="#rekening" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift-fill" viewBox="0 0 16 16">
+          <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z"/>
+        </svg>
+      </a>
+      <a href="#galeri" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-chat-left-heart-fill" viewBox="0 0 16 16">
+          <path
+            d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+        </svg>
+      </a>
+      <a href="#kutipan" class="button-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote"
+          viewBox="0 0 16 16">
+          <path
+            d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <div id="teg-cover" class="teg-full-center">
+    <div id="teg-box-cover" class="teg-full-center">
+      <div>
+        <img class="bg-1" src="assets/foto/bg-1.png" alt="">
+        <img class="pic-1" src="assets/foto/mempelai.jpg" alt="">
+        <h3 class="wedd">The Wedding Of</h3>
+        <h1 class="mempelai-1" data-aos="fade-down" data-aos-duration="1500">Wahyu & Mufarida</h1>
+        <p class="kepada">Kepada Yth.<br>
+          Bapak/Ibu/Saudara/i<br><br><br>
+          <b id="teg-kepada">Tamu Undangan</b><br><br><br>
+          di Tempat
+        </p>
+        <noscript>
+          Aktifkan JavaScript pada browser Anda untuk membuka undangan ini.<br>
+        </noscript>
+        <a href="#home" id="teg-tombol-buka" onclick="hideInvitation()"><i class="fa-solid fa-envelope"></i> Buka
+          Undangan</a>
+        <div style="display: none;">
+          <audio id="teg-audio-lagu" src="musik-jawa.mp3" loop></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/fslightbox-basic-3.4.1/fslightbox.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <script>
+    AOS.init({
+      duration: 3000, // durasi efek dalam milidetik
+      easing: 'ease-in-out', // efek easing
+    });
+  </script>
+  <script>
+    alertify.set('notifier', 'delay', 5); // 5 detik
+    alertify.set('notifier', 'position', 'top-left');
+
+    document.querySelector('.btn-rek1').addEventListener('click', function () {
+      const account1 = document.getElementById('account1').textContent;
+      navigator.clipboard.writeText(account1).then(() => {
+        alertify.success('<i class="fa-solid fa-check-double"></i> Nomor rekening berhasil disalin');
+      }).catch(err => {
+        alertify.error('Gagal menyalin nomor rekening');
+      });
+    });
+
+    document.querySelector('.btn-rek2').addEventListener('click', function () {
+      const account2 = document.getElementById('account2').textContent;
+      navigator.clipboard.writeText(account2).then(() => {
+        alertify.success('<i class="fa-solid fa-check-double"></i> Nomor rekening berhasil disalin');
+      }).catch(err => {
+        alertify.error('Gagal menyalin nomor rekening');
+      });
+    });
+  </script>
+  <script>
+    document.getElementById('cashless-btn').addEventListener('click', function () {
+      const bankInfoContainer = document.querySelector('.bank-info-container');
+
+      // Toggle active class to show/hide content with animation
+      if (bankInfoContainer.classList.contains('active')) {
+        bankInfoContainer.style.maxHeight = null;
+        bankInfoContainer.classList.remove('active');
+      } else {
+        bankInfoContainer.style.maxHeight = bankInfoContainer.scrollHeight + 'px';
+        bankInfoContainer.classList.add('active');
+      }
+    });    
+  </script>
+</body>
+
+</html>
